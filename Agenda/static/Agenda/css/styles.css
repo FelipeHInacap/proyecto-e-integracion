@@ -1,0 +1,149 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    background-image: url('../images/wallheaven.jpg');
+}
+
+/* Contenedor principal */
+.container {
+    margin-left: 61px;
+    color: #fff;
+    padding: 31px 40px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    border-radius: 25px; /* Bordes redondeados */
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 22%;
+    max-width: 30%;
+
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.container * {
+    position: relative;
+    z-index: 2;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.container .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.container .btn:hover {
+    background-color: #555;
+}
+
+/* Menú superior */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    backdrop-filter: blur(5px); /* Efecto de desenfoque para mayor legibilidad */
+    transition: background-color 0.3s ease; /* Transición suave para efectos hover */
+    gap: 69%;
+}
+.navbar .logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .menu a {
+    color: white;
+    text-decoration: none;
+    padding: 16px 30px;
+    border-radius: 16px;
+    background-color: #6a1b9a;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .menu a:hover {
+    background-color: #4a148c;
+}
+
+/* Caja de texto inferior */
+.overlay-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    max-width: 80%;
+}
+
+.overlay-1{
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    position: absolute;
+    top: 1300px;
+    left: 80%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    max-width: 80%;
+}
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .container p {
+        font-size: 1rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .menu {
+        margin-top: 20px;
+    }
+
+    .overlay-text {
+        font-size: 1rem;
+        bottom: 30px;
+    }
+}

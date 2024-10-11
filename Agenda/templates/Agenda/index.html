@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda en línea</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'Agenda/css/styles.css' %}">
+</head>
+<body>
+    <!-- Menú superior -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="{% static 'Agenda/images/AL.png' %}" alt="Logo">
+        </div>
+        <div class="menu">
+            <a href="#">Probar</a>
+            <a href="{% url 'login' %}" class="btn" id="login-btn">Acceder</a>
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <h1>Agenda en línea<br>Donde puedes elegir hora y lugar</h1>
+        <p>Administra nuevos formatos para agendar con profesionales que te estarán esperando.</p>
+        <p>¿Estás cansado de perder citas y tener desorganizada tu agenda? ¡No te preocupes más, nuestra agenda virtual es la solución!</p>
+        <a href="{% url 'login' %}" class="btn" id="login-btn">Acceder</a>
+    </div>
+
+    <!-- Texto inferior -->
+    <div class="overlay-text">
+        <h1>Aumenta tus ingresos mientras reduces el trabajo administrativo</h1>
+        <p>Nuestra agenda en línea no solo mejora la organización de tu día a día, sino que también tiene un impacto positivo en tus ingresos. Los negocios que han adoptado nuestro sistema han logrado aumentar el número de citas atendidas hasta en un 60%, al mismo tiempo que reducen las inasistencias con recordatorios automáticos. ¡Todo esto sin dedicar más tiempo a tareas administrativas!</p>
+        
+    </div>
+    <div class="overlay-1">
+        <h1>Todo lo que necesitas en un solo lugar</h1>
+        <p>Desde la gestión de citas hasta el control de inventarios y pagos en línea, nuestra agenda online es una herramienta integral que te permite tener todo bajo control. Además, podrás acceder a reportes detallados sobre la ocupación, el rendimiento de tus servicios y las preferencias de tus clientes, lo que te ayudará a tomar decisiones estratégicas para hacer crecer tu negocio.</p>
+    </div>
+</body>
+</html>
